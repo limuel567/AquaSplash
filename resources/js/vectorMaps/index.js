@@ -9,7 +9,7 @@ export default (function () {
     if ($('#world-map-marker').length > 0) {
       // This is a hack, as the .empty() did not do the work
       $('#vmap').remove();
-
+      console.log($('#vmap'));
       // we recreate (after removing it) the container div, to reset all the data of the map
       $('#world-map-marker').append(`
         <div

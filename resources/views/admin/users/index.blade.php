@@ -5,7 +5,6 @@
 @endsection
 
 @section('content')
-
     <div class="mB-20">
         <a href="{{ route(ADMIN . '.users.create') }}" class="btn btn-info">
             {{ trans('app.add_button') }}
@@ -60,5 +59,4 @@
         
         </table>
     </div>
-
 @endsection
