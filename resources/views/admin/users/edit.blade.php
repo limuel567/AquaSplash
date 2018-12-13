@@ -1,5 +1,5 @@
 @extends('admin.default')
-
+@section('title', 'Edit User ~ AquaSplash Admin')
 @section('page-header')
 	User <small>{{ trans('app.update_item') }}</small>
 @stop

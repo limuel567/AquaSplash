@@ -1,5 +1,5 @@
 @extends('admin.default')
-
+@section('title', 'Users ~ AquaSplash Admin')
 @section('page-header')
     Users <small>{{ trans('app.manage') }}</small>
 @endsection
@@ -21,17 +21,8 @@
                     <th>Actions</th>
                 </tr>
             </thead>
-            
-            <tfoot>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Actions</th>
-                </tr>
-            </tfoot>
-            
             <tbody>
-                @foreach ($items as $item)
+                @forelse ($items as $item)
                     <tr>
                         <td><a href="{{ route(ADMIN . '.users.edit', $item->id) }}">{{ $item->name }}</a></td>
                         <td>{{ $item->email }}</td>
@@ -54,9 +45,21 @@
                             </ul>
                         </td>
                     </tr>
-                @endforeach
+                @empty
+                <tr>
+                    <td>Nothing to display..</td>
+                    <td>Nothing to display..</td>
+                    <td>Nothing to display..</td>
+                </tr>
+                @endforelse
             </tbody>
-        
+            <tfoot>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </tfoot>
         </table>
     </div>
 @endsection

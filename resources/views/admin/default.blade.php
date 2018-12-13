@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title')</title>
     <!-- Styles -->
 	<link href="{{ mix('/backend/css/app.css') }}" rel="stylesheet"> 
 	@yield('css')
@@ -31,8 +31,8 @@
             </main>
             <!-- ### $App Screen Footer ### -->
             <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600">
-                <span>Copyright © 2017 Designed by
-                    <a href="https://colorlib.com" target='_blank' title="Colorlib">Colorlib</a>. All rights reserved.</span>
+                <span>Copyright © 2018 Designed by
+                    <a href="https://maverickheroes.com" target='_blank' title="Maverick Heroes">Maverick Heroes</a>. All rights reserved.</span>
             </footer>
         </div>
     </div>

@@ -6,7 +6,7 @@
                     <i class="ti-menu"></i>
                 </a>
             </li>
-            <li class="search-box">
+            {{-- <li class="search-box">
                 <a class="search-toggle no-pdd-right" href="javascript:void(0);">
                     <i class="search-icon ti-search pdd-right-10"></i>
                     <i class="search-icon-close ti-close pdd-right-10"></i>
@@ -14,10 +14,10 @@
             </li>
             <li class="search-input">
                 <input class="form-control" type="text" placeholder="Search...">
-            </li>
+            </li> --}}
         </ul>
         <ul class="nav-right">
-            <li class="notifications dropdown">
+            {{-- <li class="notifications dropdown">
                 <span class="counter bgc-red">3</span>
                 <a href="" class="dropdown-toggle no-after" data-toggle="dropdown">
                     <i class="ti-bell"></i>
@@ -180,7 +180,7 @@
                         </span>
                     </li>
                 </ul>
-            </li>
+            </li> --}}
             <li class="dropdown">
                 <a href="" class="dropdown-toggle no-after peers fxw-nw ai-c lh-1" data-toggle="dropdown">
                     <div class="peer mR-10">
@@ -192,12 +192,12 @@
                 </a>
                 <ul class="dropdown-menu fsz-sm">
                     <li>
-                        <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                        <a href="settings" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
                             <i class="ti-settings mR-10"></i>
                             <span>Setting</span>
                         </a>
                     </li>
-                    <li>
+                    {{-- <li>
                         <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
                             <i class="ti-user mR-10"></i>
                             <span>Profile</span>
@@ -208,7 +208,7 @@
                             <i class="ti-email mR-10"></i>
                             <span>Messages</span>
                         </a>
-                    </li>
+                    </li> --}}
                     <li role="separator" class="divider"></li>
                     <li>
                         <a href="/logout" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">

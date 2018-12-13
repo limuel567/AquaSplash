@@ -1,0 +1,698 @@
+@media (min-width: 1680px) {
+    .container {
+        max-width: 1540px;
+    }
+    .bookNow .container {
+        max-width: 1140px;
+    }
+}
+
+@media (max-width: 1679px){
+
+    .title-design {font-size: 80px; }
+    .innerHeader .title-design {top:110px; }
+
+    /* NAVIGATION */
+        /*.navigation .book-button:after {content:url(../images/nav-arrow.png); position: absolute; top: -30px; left: -75px; }*/
+    .navigation .navbar-nav .nav-link {font-size:24px; }
+    .navigation .book-button {display: block; position: relative; width: 200px; }
+    .navigation .book-button img {max-width: 175px; }
+    .nav-item {margin: 0 10px; }
+    .navigation .navbar-brand {max-width: 180px; }
+    #navCurve {top: 111px; }
+    .head-holder ul {right:220px; }
+
+    /** BANNER VIDEO **/
+    .banner-video .banner-content {margin-top: 150px; }
+
+    .banner-video .banner-content h2 {font-size: 200px; margin-bottom: 30px; }
+    .banner-video .banner-content h2 span {font-size: 130px; margin-left: 160px; margin-top: -80px; }
+    .banner-video .banner-content p {font-size: 12px; }
+
+    /** INFLATE **/
+    .inflate-headers h2 {font-size: 160px; }
+    .inflate-headers h3 {font-size: 120px; }
+    .inflate-headers > div {max-width: 500px; font-size: 14px; }
+    .inflate-image img {left: -100px; width: 800px; }
+
+    /** PRICES **/
+    .prices-content {font-size: 60px; }
+    .prices-wrapper p {font-size: 14px; }
+
+    /** GROUP **/
+    .groupColumn {max-width: 208px; margin: 0 5px; }
+    .groupImage {min-height: 208px; }
+    .groupInfo h2 {font-size: 20px; }
+    .groupInfo p {font-size: 12px; line-height: 1.5; }
+
+    /** GALLERY **/
+    .galleryHeaders h2 {font-size: 240px; }
+    .galleryHeaders h3 {font-size: 150px; margin-top: -95px; }
+    .galleryText p {font-size: 13px; }
+    .gallerySlider .item img {height: 130px; }
+    .gallerySlider .owl-carousel .owl-nav img {width:60px; }
+
+
+    /** FOOTER **/
+    .contactInfo span {font-size: 13px; }
+    .footerNav .navHolder a {font-size: 30px; }
+    .footerNav .copyHolder {font-size: 12px; }
+
+    /** WHY GO TO **/
+    .whyGoTo-headers h2 {font-size: 160px; }
+    .whyGoTo-headers h3 {font-size: 120px; }
+    .whyGoTo-headers > div {max-width: 500px; font-size: 14px; }
+    .whyGoTo-image img {left: 0px;width: 700px;}
+    .inverted .whyGoTo-image img {left: -275px; top: 30px; }
+
+    /** FAQS **/
+    .faqItem h2 {font-family: 'oceanSix'; font-size: 40px; color:#18469b; text-transform: uppercase; }
+    .faqItem p {font-family: 'oceanSix'; font-size: 20px; color:#36bad9; }
+
+    /** PRICING PAGE UPDATE **/
+    .pricingWrapper p {font-size: 20px; }
+
+    /** TERMS AND CONDITION **/
+    .tacHolderWrapper h2 { font-size: 40px; }
+    .tacHolderWrapper .tacItem h3 { font-size: 30px; }
+    .tacHolderWrapper .tacItem p,
+    .tacListWrapper li a { font-size: 24px; }
+
+
+    /** CONTACT **/
+    .contactPageWrapper .contactPageInfo p {font-size: 24px; }
+    .contactPageWrapper .contactPageInfo .contactPageHead h3 {font-size: 40px; }
+    .contactPageWrapper .contactPageInfo .contactPageHead .contactPageImg {width: 50px; height: 50px; }
+
+    /** EVENTS **/
+    .eventsPageWrapper .eventsPageInfo .eventsPageHead h2 {font-size: 60px; }
+    .eventsPageWrapper .eventsPageInfo .eventPageContent p {font-size: 20px; }
+    .eventsPageWrapper .eventsPageInfo .slider-area {max-width: 930px; }
+    .eventsPageWrapper .eventsPageInfo .slider-area .owl-carousel .item .eventsPageImg {height: 200px; width: 300px; }
+    .eventsPageWrapper .eventsPageInfo .slider-area .owl-carousel .owl-nav .owl-prev {left: -90px; top: 80px; width: 60px; }
+    .eventsPageWrapper .eventsPageInfo .slider-area .owl-carousel .owl-nav .owl-next {right: -90px; top: 80px; width: 60px; }
+
+    /** SUBMENU **/
+    .sub-menu {max-height: 466px; overflow-y: scroll; }
+
+    /*GALLERY*/
+    .galleryPageWrapper .tabControl {top:400px; }
+    .galleryPageWrapper .owl-carousel .owl-dots { top: 255px; height: 827px; }
+    .galleryPageWrapper .galleryImageSlider { min-height: 930px; }
+}
+
+@media (max-width: 1440px) {
+    /** CONTACT **/
+    .contactPageWrapper .contactPageInfo .contactPageHead h3 {
+        font-size: 30px;
+    }
+
+    .contactPageWrapper .contactPageInfo .contactPageHead .contactPageImg {
+        width: 40px;
+        height: 40px;
+    }
+
+    /** EVENTS **/
+    .eventsPageWrapper .eventsPageInfo .eventsPageHead h2 {
+        font-size: 50px;
+    }
+
+    .eventsPageWrapper .eventsPageInfo .slider-area .owl-carousel .item .eventsPageImg .eventsPageoverlay .zoom {
+        height: 65px;
+        width: 65px;
+    }
+
+    /** FAQ **/
+    .faqItem h2 {
+        font-size: 30px;
+    }
+
+    /** PRICING **/
+    .prices-content {
+        font-size: 40px;
+    }
+
+    /** SUBMENU **/
+    .sub-menu {
+        max-height: 335px;
+        overflow-y: scroll;
+    }
+
+    .termsHolder .col-sm-4 .sticky {
+        max-width: 28.333333%;
+        flex: 0 0 28.333333%;
+    }
+}
+
+@media (max-width: 1366px){ 
+
+    /** SUBMENU **/
+    .sub-menu {
+        max-height: 290px;
+        overflow-y: scroll;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    /*DESIGN*/
+    .innerHeader > img { margin-top: 50px; }
+
+    /** NAVIGATION **/
+    .navigation .navbar-brand {max-width: 160px; margin-top: -20px; }
+    .navigation .nav-item {margin: 0px 9px; }
+    .navigation .navbar-nav .nav-link {font-size: 22px; }
+    .navigation .book-button img {max-width: 140px; position: absolute; top: -30px; }
+    #navCurve {top: 99px; }
+    .head-holder {height: 25px; }
+    .head-holder-items i {min-height: 35px; width: 35px; line-height: 35px; }
+
+    /*BANNER VIDEO*/
+    .banner-video { height: 680px !important; }
+    .banner-video .banner-content { margin-top: 130px; }
+    .banner-video .banner-content h2 {font-size: 150px; margin-bottom: 30px; }
+    .banner-video .banner-content h2 span {font-size: 100px; margin-left: 135px; margin-top: -60px; }
+    .banner-video .blueOverlay {     background-size: cover; background-position: center; }
+
+    /* INFLATE */
+    .inflate-headers h2 {font-size: 130px; }
+    .inflate-headers h3 {font-size: 100px; margin-top: -50px; }
+    .inflate-headers > div {max-width: 420px; font-size: 13px; }
+    .inflate-wrapper .learnMore {max-width: 300px; display:block; margin:0 auto; }
+    .inflate-image img {left: -100px; width: 685px; }
+
+    /*GROUPS*/
+    .groupColumn { max-width: 172px; }
+    .groupImage {min-height: 172px; }
+    .groupInfo { padding: 20px 10px; }
+
+    /*GALLERY*/
+    .galleryHeaders h2 {font-size: 200px; }
+    .galleryHeaders h3 {font-size: 120px; margin-top: -70px; }
+
+    /*FOOTER*/
+    .footerNav .logoHolder img {max-width: 160px; margin-top: -20px; }
+    .footerNav .navHolder a {font-size: 22px; }
+    .footerNav .navHolder li { margin: 0 10px; }
+    #navCurveInverted {bottom: 112px; }
+    footer {min-height: 880px; }
+
+    /*WHY GO TO*/
+    .whyGoTo-wrapper { padding: 0 0 10px; }
+    .whyGoTo-headers h2 {font-size: 140px; }
+    .whyGoTo-headers h3 {font-size: 100px; margin-top: -40px; }
+    .whyGoTo-image img {left: -60px; width: 550px; }
+    .inverted .whyGoTo-headers h2 {font-size: 130px; }
+    .inverted .whyGoTo-image img {left: -175px; }
+
+    /** EVENTS **/
+    .eventsPageWrapper .eventsPageInfo .slider-area {
+        max-width: 767px;
+    }
+
+    .eventsPageWrapper .eventsPageInfo .slider-area .owl-carousel .owl-nav .owl-prev {
+        left: -81px;
+        width: 50px;
+        top: 60px;
+    }
+
+    .eventsPageWrapper .eventsPageInfo .slider-area .owl-carousel .owl-nav .owl-next {
+        right: -81px;
+        width: 50px;
+        top: 60px;
+    }
+
+    .eventsPageWrapper .eventsPageInfo .slider-area .owl-carousel .item .eventsPageImg {
+        height: 165px;
+        width: 248px;
+    }
+
+    .eventsPageWrapper .eventsPageInfo .slider-area .owl-carousel .item .eventsPageImg .eventsPageoverlay .zoom {
+        height: 60px;
+        width: 60px;
+    }
+
+    /*GALLERY*/
+    .galleryPageWrapper .tabControl {top:330px; }
+    .galleryPageWrapper .owl-carousel .owl-dots { top: 200px; }
+
+}
+
+
+
+/**{ outline: 1px solid red;}*/
+@media (min-width: 992px){ 
+
+}
+
+@media (max-width: 991px){ 
+    /** NAVIGATION **/
+    .container-mobile-fluid {max-width: 100%; }
+    #navbarCollapse {background-image:url(../images/bg.jpg); background-color: #ffffff; z-index: 5; position: relative; }
+    .navigation .nav-item {text-align: center; }
+    .navigation .book-button {width: 100%; }
+    .navigation .book-button img {position: relative; left:initial; top:initial; }
+
+    /* INFLATE */
+    .inflate-headers h2 {font-size: 100px; }
+    .inflate-headers h3 {font-size: 75px; margin-top: -35px; }
+    .inflate-headers > div {max-width: 335px; font-size: 12px; margin-bottom: 20px; }
+    .inflate-wrapper .learnMore {max-width: 300px; display:block; margin:0 auto; }
+    .inflate-image img {left: -120px; width: 535px; }
+
+    /*PRICES*/
+    .prices-wrapper { padding:50px 0 0; }
+    .prices-content {font-size: 40px; }
+
+    /* GROUPS */
+    .groupContents { text-align: center; }
+    .groupColumn {max-width: 30%; margin: 0 1% 20px; }
+
+    /* GALLERY */
+    .galleryHeaders h2 {font-size: 150px; }
+    .galleryHeaders h3 {font-size: 85px; margin-top: -45px; }
+    .galleryText p {font-size: 12px; line-height: 1.5; }
+
+    /*GENERAL DESIGN*/
+    .title-design img {max-width: 150px; }
+    .title-design {font-size: 60px; }
+
+    /*WHY GO TO*/
+    .whyGoTo-wrapper .col-lg-5 {order:1;}
+    .whyGoTo-wrapper .col-lg-7 {order:2;}
+    .whyGoTo-headers { text-align: center; }
+    .whyGoTo-headers h3 { margin-right: 0; }
+    .whyGoTo-image img,
+    .inverted .whyGoTo-image img {position: relative; top:initial; left: initial; right: initial; bottom: initial; width: initial; max-width: 100%; }
+    .whyGoTo-wrapper .row { margin-bottom: 0; }
+    .whyGoTo-headers > div { margin: 50px auto 0; }
+
+
+    /** EVENTS **/
+    .eventsPageWrapper .eventsPageInfo .slider-area {
+        max-width: 525px;
+    }
+
+    /** CONTACT **/
+    .mx-767 {
+        max-width: 525px;
+    }
+
+    .termsHolder .col-sm-8 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /** TERMS **/
+    .tacListWrapper {
+        display: none;
+    }
+
+    /** SIDENAV **/
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: -36px;
+        overflow-x: hidden;
+        transition: 0.5s;
+        display: none;
+        padding-left: 35px;
+        background-image: url(../images/bg.jpg);
+        padding-right: 15px;
+        padding-top: 334px;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 334px;
+        left: 0px;
+        font-size: 36px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 334px;
+        right: 25px;
+        transition: margin-right .5s;
+        transition: .5s;
+        display: block; 
+    }
+
+    .mobile-booknow { display: block; }
+    .bookButton_mobile { display: none; }
+
+    /*BOOKNOW 1*/
+    .bookNow h2 {font-size: 50px;}
+
+    /*GALLERY*/
+    .galleryPageWrapper .tabControl li a { width:280px; }
+    .galleryPageWrapper .tabControl {top: 250px; }
+    .galleryPageWrapper .owl-carousel .owl-dots {top: 150px; max-width: 260px; height: 600px; }
+    .galleryPageWrapper .owl-dot { height: 100px; width:100px; }
+    .galleryPageWrapper .galleryImageSlider {
+        min-height: 580px;
+    }
+}
+
+@media (max-width: 767px){ 
+    /*GENERAL DESIGN*/
+    .title-design img {max-width: 120px; }
+    .title-design {font-size: 50px; margin-bottom: 20px; }
+    .container-tablet-fluid { max-width:100%; }
+
+    /*HEADER*/
+    .head-holder ul {right:150px; }
+
+    /*INFLATE*/
+    .inflate-wrapper {padding: 20px 0 20px;}
+    .inflate-wrapper .col-md-5 { order:2; }
+    .inflate-wrapper .col-md-7 { order:1; }
+    .inflate-image img { position: relative; left: initial; top:initial; width:100%; }
+    .inflate-headers { text-align: center; }
+    .inflate-headers > div { max-width: 100%; }
+
+    /* GROUPS */
+    .groupsWrapper {padding: 190px 0 100px; margin-top: -70px; }
+    .groupContents { text-align: center; }
+    .groupColumn {max-width: 47%; margin: 0 1% 20px; }
+
+    /*GALLERY*/
+    .galleryWrapper { padding:20px 0 10px; }
+    .galleryHeaders { text-align: center; margin-bottom: 20px; }
+    .galleryHeaders h3 { margin-right: 0; }
+    .galleryText p { position: relative; }
+
+    /* FOOTER */
+    .contactWrapper .map { margin-bottom: 20px; }
+    .contactWrapper .map iframe { min-height: 250px; }
+    footer {min-height: 1120px; }
+
+    /*WHY GO TO*/
+    .whyGoTo-headers h2,
+    .inverted .whyGoTo-headers h2 {font-size: 100px; }
+    .whyGoTo-headers h3,
+    .inverted .whyGoTo-headers h3 {font-size: 75px; }
+
+
+    /** EVENTS **/
+    .eventsPageWrapper .eventsPageInfo .slider-area {
+        max-width: 248px;
+    }
+
+    .eventsPageWrapper .eventsPageInfo .eventsPageHead h2 {
+        font-size: 45px;
+    }
+
+    /** CONTACt **/
+    .contactPage-wrapper .mb-50 {
+        margin-bottom: 20px;
+    }
+
+    .contactPageWrapper .contactPageInfo:after {
+        bottom: -75px;
+        height: 55px;
+    }
+
+    /** FAQ **/
+    .faqItem {
+        padding-right: 15px;
+    }
+
+    /** BanguetteBox **/
+    #baguetteBox-overlay .full-image {padding: 15px; }
+
+    /*BOOK NOW*/
+    .bookNow .endGame {
+        padding: 50px 0;
+        margin: 0;
+    }
+
+    .galleryPageWrapper .intro p {
+        font-size: 20px;
+    }
+    .galleryPageWrapper .tabControl li a {
+        width: 210px;
+        font-size: 20px;
+    }
+    .galleryPageWrapper .tabControl li a i {
+        line-height: 42px;
+    }
+}
+
+@media (max-width: 700px){
+    .innerHeader > img {margin-top: 80px; }
+}
+
+@media (max-width: 676px){
+    footer {min-height: initial; margin-top: -40px; }
+    footer .contactWrapper {margin-bottom: 30px; }
+    footer .footerNav {position: relative; bottom: initial; }
+    footer .footerNav .logoHolder, .footerNav .navHolder {float:none !important; display: block; text-align: center; }
+    footer .footerNav .navHolder {margin-top: 15px; }
+    footer #navCurveInverted {bottom: 159px; }
+    footer .contactForm button.submit { display: none }
+    footer .contactForm button.submit-mobile {display: block;text-align: center;margin: 0 auto;}
+    footer .contactInfo { margin-top: 30px; }
+    .footerNav .logoHolder {margin:0 auto; }
+}
+
+@media (max-width: 600px){
+    /*GENERAL DESIGN*/
+    .title-design img {max-width: 80px; }
+    .title-design {font-size: 40px; }
+
+    /*BANNER VIDEO*/
+    .banner-video { height: 600px !important; }
+    .banner-video .blueOverlay { background-position: left; }
+    .banner-video .banner-content { max-width: 100%; text-align: center; }
+    .banner-video .banner-content .LearnMore { margin: auto; }
+
+    /*PRICES*/
+    .prices-content {font-size: 30px; }
+
+    /*BOOKNOW*/
+    .bookNow .timeSelect .row { font-size: 20px; line-height: 1.6; }
+
+    .galleryPageWrapper .owl-carousel .owl-dots {top: 400px;height: 361px;}
+    .galleryPageWrapper .tabControl {top: 335px;}
+    .galleryPageWrapper .tabControl ul { text-align: center; }
+    .galleryPageWrapper .tabControl li { display: block; margin-bottom: 10px; }
+    .galleryPageWrapper .tabControl li a { margin:0 auto; }
+    .galleryPageWrapper .galleryImageSlider {
+        min-height: 710px;
+    }
+}
+
+@media (max-width: 500px) {
+    footer #navCurveInverted {bottom: 192px; }
+    .gallerySlider .item img { width: 100%; }
+
+    .innerHeader .title-design {top: 100px; }
+    .innerHeader > img {margin-top: 100px; }
+
+    .prices-wrapper .prices-content .clearfix > div {
+        float:none !important;
+        display: block;
+        text-align:center;
+    }
+    .prices-wrapper .prices-content .clearfix {
+        margin-bottom: 10px;
+        border-radius: 8px;
+        border: 2px solid #0c9ef5;
+    }
+
+    .bookNow .next {
+        margin: 0 auto 20px;
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 425px){
+    .innerHeader > img {
+        margin-top: 85px;
+    }
+    .innerHeader .title-design {
+        top: 90px;
+    }
+
+    /* HEADER*/
+    header { min-height: 85px; }
+    #navCurve {top: 84px; }
+    .navigation .navbar-brand { max-width: 110px; margin-top: -10px; }
+    .mobile-booknow {max-width: 75px;top:0;right: 0;}
+    .navbar-toggler {margin-right: 65px;}
+    .navbar-toggler-icon { width: 1em; height: 1em; }
+    .head-holder ul { right: 85px; }
+    .head-holder-items i { min-height: 30px; line-height: 30px; width: 30px; }
+
+    /*INFLATE*/
+    .inflate-headers h2 {font-size: 80px; }
+    .inflate-headers h3 {font-size: 60px; margin-top: -25px; text-align: right; }
+    .inflate-headers > div { margin-top: 30px; }
+
+    /*BANNER VIDEO*/
+    .banner-video .banner-content h2 span {margin-left: 60px; }
+
+    /* FOOTER */
+    .contactForm input[type=text], .contactForm input[type=email] { padding:0 20px; }
+    .fqtc { margin-top: 20px; }
+    .fqtc a {font-size: 30px; }
+
+    /*GENERAL DESIGN*/
+    .title-design img { display: none; }
+
+    /*WHY GO TO*/
+    .whyGoTo-headers h2{font-size: 75px; }
+    .inverted .whyGoTo-headers h2 { font-size: 70px; }
+    .whyGoTo-headers h3, .inverted .whyGoTo-headers h3 { font-size: 50px; margin-top: -20px; }
+
+
+
+    /** EVENTS **/
+    .eventsPageWrapper .eventsPageInfo .slider-area .owl-carousel .owl-nav .owl-prev {
+        left: -65px;
+    }
+
+    .eventsPageWrapper .eventsPageInfo .slider-area .owl-carousel .owl-nav .owl-next {
+        right: -65px;
+    }
+
+    .eventsPageWrapper .eventsPageInfo-after-before:before {
+        top: -70px;
+        height: 50px;
+    }
+
+    .eventsPage-wrapper .eventsPageInfo .pb-50 {
+        padding-bottom: 20px;
+    }
+
+    .eventsPage-wrapper .mb-50 {
+        margin-bottom: 20px;
+    }
+
+    .eventsPageWrapper .eventsPageInfo-after-before:after {
+        bottom: -70px;
+        height: 50px;
+    }
+
+    /** PRICING **/
+    .prices-content {
+        font-size: 35px;
+    }
+
+    .bookNow h2 {
+        font-size: 30px;
+    }
+    .bookNow .endGame:first-child:before,
+    .bookNow .endGame:nth-child(3):before {
+        background-image: url(../images/bookNow-line2.png);
+        height: 8px;
+        width: 90%;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+    .bookNow .endGame:first-child:before {
+        bottom:0;
+    }
+    .bookNow .endGame:nth-child(3):before {
+        top:0;
+    }
+
+    .galleryPageWrapper .tabControl {
+        top: 280px;
+    }
+    .galleryPageWrapper .owl-carousel .owl-dots {
+        top:420px;
+        height: 225px;
+    }
+
+    .galleryPageWrapper .galleryImageSlider {
+        min-height: 640px;
+    }
+
+}
+
+@media (max-width: 375px){
+    /*INFLATE*/
+    .inflate-headers h2 {font-size: 72px; }
+
+    /*GROUPS*/
+    .groupImage {min-height: 137px; }
+
+    /*GALLERY*/
+    .galleryHeaders h2 {font-size: 130px; }
+
+    /** EVENTS **/
+    .eventsPageWrapper .eventsPageInfo .slider-area .owl-carousel .item .eventsPageImg {
+        height: 140px;
+        width: 210px;
+    }
+
+    .eventsPageWrapper .eventsPageInfo .slider-area {
+        max-width: 210px;
+    }
+
+    .eventsPageWrapper .eventsPageInfo .slider-area .owl-carousel .item .eventsPageImg .eventsPageoverlay .zoom {
+        height: 50px;
+        width: 50px;
+    }
+
+    .eventsPageWrapper .eventsPageInfo .slider-area .owl-carousel .owl-nav .owl-prev {
+        width: 45px;
+        top: 50px;
+    }
+
+    .eventsPageWrapper .eventsPageInfo .slider-area .owl-carousel .owl-nav .owl-next {
+        width: 45px;
+        top: 50px;
+    }
+
+    /*BOOK NOW*/
+    .bookNow .timeSelect .row {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 350px){  
+    /** EVENTS **/
+    .eventsPageWrapper .eventsPageInfo .slider-area .owl-carousel .item .eventsPageImg {
+        height: 120px;
+        width: 185px;
+    }
+
+    .eventsPageWrapper .eventsPageInfo .slider-area {
+        max-width: 185px;
+    }
+
+    .eventsPageWrapper .eventsPageInfo .slider-area .owl-carousel .owl-nav .owl-prev {
+        width: 40px;
+        top: 40px;
+        left: -55px;
+    }
+
+    .eventsPageWrapper .eventsPageInfo .slider-area .owl-carousel .owl-nav .owl-next {
+        width: 40px;
+        top: 40px;
+        right: -55px;
+    }
+
+    /** PRICING **/
+    .prices-content {
+        font-size: 30px;
+    }
+
+    .galleryPageWrapper .tabControl {
+        top: 230px;
+    }
+    .galleryPageWrapper .owl-carousel .owl-dots {
+        top:375px;
+    }
+}

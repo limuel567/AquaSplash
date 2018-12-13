@@ -7,12 +7,12 @@
 					<a class='sidebar-link td-n' href="/">
 						<div class="peers ai-c fxw-nw">
 							<div class="peer">
-								<div class="logo">
-									<img src="/backend/images/logo.png" alt="">
+								<div class="logo" style="position: relative;">
+									<img src="/frontend/images/logo.png" alt="" style="margin: auto;top: 0;bottom: 0;position: absolute;">
 								</div>
 							</div>
 							<div class="peer peer-greed">
-								<h5 class="lh-1 mB-0 logo-text">Laradminator</h5>
+								<h5 class="lh-1 mB-0 logo-text">{{config('app.name', 'Laravel')}}</h5>
 							</div>
 						</div>
 					</a>

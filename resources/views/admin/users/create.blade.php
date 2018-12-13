@@ -1,12 +1,12 @@
 @extends('admin.default')
-
+@section('title', 'Create User ~ AquaSplash Admin')
 @section('page-header')
 	User <small>{{ trans('app.add_new_item') }}</small>
 @stop
 
 @section('content')
 	{!! Form::open([
-			'action' => ['UserController@store'],
+			'action' => ['Backend\UserController@store'],
 			'files' => true
 		])
 	!!}
