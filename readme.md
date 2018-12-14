@@ -5,8 +5,8 @@
 ## Setup:
 All you need is to run these commands:
 ```bash
-git clone https://github.com/kossa/laradminator.git
-cd laradminator 
+git clone https://github.com/limuel567/AquaSplash.git
+cd AquaSplash 
 composer install                   # Install backend dependencies
 sudo chmod 777 storage/ -R         # Chmod Storage
 cp .env.example .env               # Update database credentials configuration
@@ -17,18 +17,9 @@ npm run production                 # To compile assets for prod
 ```
 
 
-## Demo:
-- Online demo: Can be found at [laradminator.bel4.com/admin](http://laradminator.bel4.com/admin)
-- Local demo:  
-`php artisan serve                  # Check installation (optional)`  
-Open browser at [localhost:8000/admin](http://localhost:8000/admin) 
-
 **Note:**  
-Username: test@example.com      
-Password: 123456
-
-> All the data are reset each 30mn ;) 
-> **please d'ont forget to remove [this](https://github.com/kossa/laradminator/blob/master/app/Console/Kernel.php#L27-L28) function in your app** 
+Username: admin@gmail.com      
+Password: 12345
 
 ***
 
@@ -75,4 +66,4 @@ you can check full example in [User.php](https://github.com/kossa/laradminator/b
 
 
 #### Do you have question ?
-Not hesitate, [open](https://github.com/kossa/laradminator/issues/new) new issue ;)
+Not hesitate, [open](https://github.com/limuel/AquaSplash/issues/new) new issue ;)
