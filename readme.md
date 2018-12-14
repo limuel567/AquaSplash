@@ -66,4 +66,4 @@ you can check full example in [User.php](https://github.com/kossa/laradminator/b
 
 
 #### Do you have question ?
-Not hesitate, [open](https://github.com/limuel/AquaSplash/issues/new) new issue ;)
+Not hesitate, [open](https://github.com/limuel567/AquaSplash/issues/new) new issue ;)
