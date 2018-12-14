@@ -1,5 +1,5 @@
 @extends('frontend.layout')
-@section('title','Home | Aqua Splash!')
+@section('title','Home | Aqua Splash')
 @section('css')
 @stop
 @section('sub-header')

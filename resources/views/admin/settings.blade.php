@@ -15,9 +15,6 @@
                 <li class="nav-item">
                     <a class="nav-link" id="social-links-tab" data-toggle="tab" href="#social-links" role="tab" aria-controls="social-links" aria-selected="false">Social Links</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="payment-keys-tab" data-toggle="tab" href="#payment-keys" role="tab" aria-controls="payment-keys" aria-selected="false">Stripe/Paypal API Keys</a>
-                </li>
             </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
@@ -63,6 +60,20 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
+                                    <label for="name">Contact Number</label>
+                                    <input type="text" name="contact_number" class="form-control" value="{{$settings->contact_number != '' ? $settings->contact_number : ''}}">
+                                    <div class="invalid-feedback" id="contact_number"></div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="name">Address</label>
+                                    <input type="text" name="address" class="form-control" value="{{$settings->address != '' ? $settings->address : ''}}">
+                                    <div class="invalid-feedback" id="address"></div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
                                     <label for="name">Copyright</label>
                                     <input type="text" name="copyright" class="form-control" value="{{$settings->copyright != '' ? $settings->copyright : ''}}">
                                     <div class="invalid-feedback" id="copyright"></div>
@@ -90,7 +101,7 @@
                                         <div class="form-row">
                                             <div class="form-group col-md-12">
                                                 <label for="avatar">Default Avatar Profile</label>
-                                                <div id="avatar-preview" style="border-radius: 50%;width: 150px;height: 150px;object-fit: cover; background: url({{$defaults->avatar != '' ? $defaults->avatar : ''}});background-size: cover;background-position: center;">
+                                                <div id="avatar-preview" style="border-radius: 50%;width: 150px;height: 150px;object-fit: cover; background: url({{$defaults->avatar != '' ? asset('uploads/avatar/'.Auth::user()->id.'/'.$defaults->avatar) : ''}});background-size: cover;background-position: center;">
                                                     <label for="avatar-upload" id="avatar-label">Choose Avatar</label>
                                                     <input type="file" name="avatar" id="avatar-upload" />
                                                 </div>
@@ -106,7 +117,7 @@
                                         <div class="form-row">
                                             <div class="form-group col-md-12">
                                                 <label for="cover">Default Profile Cover</label>
-                                                <div id="cover-preview" style="width: 500px;height: 250px;object-fit: cover; background: url({{$defaults->cover != '' ? $defaults->cover : ''}});background-size: cover;background-position: center;">
+                                                <div id="cover-preview" style="width: 500px;height: 250px;object-fit: cover; background: url({{$defaults->cover != '' ? asset('uploads/cover/'.Auth::user()->id.'/'.$defaults->cover) : ''}});background-size: cover;background-position: center;">
                                                     <label for="cover-upload" id="cover-label">Choose Cover</label>
                                                     <input type="file" name="cover" id="cover-upload" />
                                                 </div>
@@ -137,18 +148,6 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="twitter">Twitter</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text">twitter.com/</div>
-                                        </div>
-                                        <input type="text" class="form-control" name="twitter_link" value="{{ unserialize($settings->social_media_links)['twitter'] != '' ? unserialize($settings->social_media_links)['twitter'] : ''}}">
-                                        <div class="invalid-feedback" id="twitter_link"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
                                     <label for="instagram">Instagram</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
@@ -163,312 +162,10 @@
                         </form>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="payment-keys" role="tabpanel" aria-labelledby="payment-keys-tab">
-                    <div class="p-20">
-                        <form id="payment-keys-form">
-                            @csrf
-                            <h3>Stripe</h3>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="stripe-api-key">Api Key</label>
-                                    <input type="text" name="stripe_api_key" id="stripe-api-key" class="form-control" value="{{$settings->stripe_api_key != '' ? $settings->stripe_api_key : ''}}">
-                                    <div class="invalid-feedback" id="stripe_api_key"></div>
-                                </div>
-                            </div>
-                            <hr>
-                            <h3>Paypal</h3>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="paypal-mode">Mode:</label>
-                                    <select name="paypal_mode" id="paypal-mode" class="form-control">
-                                        <option value="sandbox">Sandbox</option>
-                                        <option value="production" selected>Live</option>
-                                    </select>
-                                    <div class="invalid-feedback" id="paypal-mode"></div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="paypal-sandbox">Sandbox Client ID</label>
-                                    <input type="text" name="paypal_sandbox" id="paypal-sandbox" class="form-control" value="">
-                                    <div class="invalid-feedback" id="paypal_sandbox"></div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="paypal-live">Live Client ID</label>
-                                    <input type="text" name="paypal_live" id="paypal-live" class="form-control" value="">
-                                    <div class="invalid-feedback" id="paypal_live"></div>
-                                </div>
-                            </div>
-                            <button type="button" class="btn btn-primary submit-payment-keys">Save Changes</button>
-                        </form>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 </div>
 @stop
 @section('js')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.8/js/fileinput.min.js"></script> --}}
-<script>
-    $(".submit-cover-form").click(function () {
-        if ($('#cover-upload').get(0).files.length) {
-            var formData = new FormData($('#cover-form')[0]);
-            $.ajax({
-                'headers': {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                'url': "{!! URL('admin/settings/default-cover') !!}",
-                'method': 'post',
-                'dataType': 'json',
-                'data': formData,
-                'processData': false,
-                'contentType': false,
-                success: function (data) {
-                    // Remove error
-                    $('.form-control').removeClass('is-invalid');
-                    $('.invalid-feedback').hide();
-                    if (data.result == 'success') {
-                        noty({
-                            theme: 'app-noty',
-                            text: 'Successfully saved changes!',
-                            type: 'success',
-                            timeout: 3000,
-                            layout: 'bottomRight',
-                            closeWith: ['button', 'click'],
-                            animation: {
-                                open: 'noty-animation fadeIn',
-                                close: 'noty-animation fadeOut'
-                            }
-                        });
-                    } else {
-                        noty({
-                            theme: 'app-noty',
-                            text: 'Please check your inputs and try again..',
-                            type: 'error',
-                            timeout: 3000,
-                            layout: 'bottomRight',
-                            closeWith: ['button', 'click'],
-                            animation: {
-                                open: 'noty-animation fadeIn',
-                                close: 'noty-animation fadeOut'
-                            }
-                        });
-                        $.each(data.errors, function (key, value) {
-                            if (value != "") {
-                                $("#" + key).show();
-                                $("#" + key).text(value);
-                                $("input[name=" + key + "]").addClass("is-invalid");
-                            }
-                        });
-                    }
-                },
-                beforeSend: function () {
-                    $(".submit-cover-form").text('Saving..')
-                    $(".submit-cover-form").attr('disabled', true)
-                },
-                complete: function () {
-                    $(".submit-cover-form").text('Save Changes')
-                    $(".submit-cover-form").attr('disabled', false)
-                }
-            });
-            return false;
-        } else {
-            return false;
-        }
-    });
-    $(".submit-avatar-form").click(function () {
-        if ($('#avatar-upload').get(0).files.length) {
-            var formData = new FormData($('#avatar-form')[0]);
-            $.ajax({
-                'headers': {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                'url': "{!! URL('admin/settings/default-avatar') !!}",
-                'method': 'post',
-                'dataType': 'json',
-                'data': formData,
-                'processData': false,
-                'contentType': false,
-                success: function (data) {
-                    // Remove error
-                    $('.form-control').removeClass('is-invalid');
-                    $('.invalid-feedback').hide();
-                    if (data.result == 'success') {
-                        noty({
-                            theme: 'app-noty',
-                            text: 'Successfully saved changes!',
-                            type: 'success',
-                            timeout: 3000,
-                            layout: 'bottomRight',
-                            closeWith: ['button', 'click'],
-                            animation: {
-                                open: 'noty-animation fadeIn',
-                                close: 'noty-animation fadeOut'
-                            }
-                        });
-                    } else {
-                        noty({
-                            theme: 'app-noty',
-                            text: 'Please check your inputs and try again..',
-                            type: 'error',
-                            timeout: 3000,
-                            layout: 'bottomRight',
-                            closeWith: ['button', 'click'],
-                            animation: {
-                                open: 'noty-animation fadeIn',
-                                close: 'noty-animation fadeOut'
-                            }
-                        });
-                        $.each(data.errors, function (key, value) {
-                            if (value != "") {
-                                $("#" + key).show();
-                                $("#" + key).text(value);
-                                $("input[name=" + key + "]").addClass("is-invalid");
-                            }
-                        });
-                    }
-                },
-                beforeSend: function () {
-                    $(".submit-avatar-form").text('Saving..')
-                    $(".submit-avatar-form").attr('disabled', true)
-                },
-                complete: function () {
-                    $(".submit-avatar-form").text('Save Changes')
-                    $(".submit-avatar-form").attr('disabled', false)
-                }
-            });
-            return false;
-        } else {
-            return false;
-        }
-    });
-    $(".submit-social-links").click(function () {
-        var formData = new FormData($('#social-links-form')[0]);
-        $.ajax({
-            'headers': {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            },
-            'url': "{!! URL('admin/settings/social') !!}",
-            'method': 'post',
-            'dataType': 'json',
-            'data': formData,
-            'processData': false,
-            'contentType': false,
-            success: function (data) {
-                // Remove error
-                $('.form-control').removeClass('is-invalid');
-                $('.invalid-feedback').hide();
-                if (data.result == 'success') {
-                    noty({
-                        theme: 'app-noty',
-                        text: 'Successfully saved changes!',
-                        type: 'success',
-                        timeout: 3000,
-                        layout: 'bottomRight',
-                        closeWith: ['button', 'click'],
-                        animation: {
-                            open: 'noty-animation fadeIn',
-                            close: 'noty-animation fadeOut'
-                        }
-                    });
-                } else {
-                    noty({
-                        theme: 'app-noty',
-                        text: 'Please check your inputs and try again..',
-                        type: 'error',
-                        timeout: 3000,
-                        layout: 'bottomRight',
-                        closeWith: ['button', 'click'],
-                        animation: {
-                            open: 'noty-animation fadeIn',
-                            close: 'noty-animation fadeOut'
-                        }
-                    });
-                    $.each(data.errors, function (key, value) {
-                        if (value != "") {
-                            $("#" + key).show();
-                            $("#" + key).text(value);
-                            $("input[name=" + key + "]").addClass("is-invalid");
-                        }
-                    });
-                }
-            },
-            beforeSend: function () {
-                $(".submit-social-links").text('Saving..')
-                $(".submit-social-links").attr('disabled', true)
-            },
-            complete: function () {
-                $(".submit-social-links").text('Save Changes')
-                $(".submit-social-links").attr('disabled', false)
-            }
-        });
-        return false;
-    });
-    $(".submit-general").click(function () {
-        var formData = new FormData($('#general-form')[0]);
-        $.ajax({
-            'headers': {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            },
-            'url': "{!! URL('admin/settings/general') !!}",
-            'method': 'post',
-            'dataType': 'json',
-            'data': formData,
-            'processData': false,
-            'contentType': false,
-            success: function (data) {
-                // Remove error
-                $('.form-control').removeClass('is-invalid');
-                $('.invalid-feedback').hide();
-                if (data.result == 'success') {
-                    noty({
-                        theme: 'app-noty',
-                        text: 'Successfully saved changes!',
-                        type: 'success',
-                        timeout: 3000,
-                        layout: 'bottomRight',
-                        closeWith: ['button', 'click'],
-                        animation: {
-                            open: 'noty-animation fadeIn',
-                            close: 'noty-animation fadeOut'
-                        }
-                    });
-                } else {
-                    noty({
-                        theme: 'app-noty',
-                        text: 'Please check your inputs and try again..',
-                        type: 'error',
-                        timeout: 3000,
-                        layout: 'bottomRight',
-                        closeWith: ['button', 'click'],
-                        animation: {
-                            open: 'noty-animation fadeIn',
-                            close: 'noty-animation fadeOut'
-                        }
-                    });
-                    $.each(data.errors, function (key, value) {
-                        if (value != "") {
-                            $("#" + key).show();
-                            $("#" + key).text(value);
-                            $("input[name=" + key + "]").addClass("is-invalid");
-                        }
-                    });
-                }
-            },
-            beforeSend: function () {
-                $(".submit-general").text('Saving..')
-                $(".submit-general").attr('disabled', true)
-            },
-            complete: function () {
-                $(".submit-general").text('Save Changes')
-                $(".submit-general").attr('disabled', false)
-            }
-        });
-        return false;
-    });
-</script>
 @stop

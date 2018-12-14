@@ -39,13 +39,13 @@ mix.js('resources/js/app.js', 'public/backend/js')
         'resources/frontend/js/main.js',
     ], 'public/frontend/js/app.js')
     .styles([
-        'resources/frontend/sass/vendor/bootstrap.min.css',
-        'resources/frontend/sass/vendor/font-awesome.min.css',
-        'resources/frontend/sass/vendor/banguetteBox.min.css',
-        'resources/frontend/sass/vendor/bootstrap-datetimepicker.min.css',
-        'resources/frontend/sass/vendor/owl.carousel.min.css',
-        'resources/frontend/sass/vendor/main.css',
-        'resources/frontend/sass/vendor/responsive.css',
+        'resources/frontend/sass/vendor/bootstrap.min.scss',
+        'resources/frontend/sass/vendor/font-awesome.min.scss',
+        'resources/frontend/sass/vendor/banguetteBox.min.scss',
+        'resources/frontend/sass/vendor/bootstrap-datetimepicker.min.scss',
+        'resources/frontend/sass/vendor/owl.carousel.min.scss',
+        'resources/frontend/sass/vendor/main.scss',
+        'resources/frontend/sass/vendor/responsive.scss',
     ], 'public/frontend/css/app.css')
     .copyDirectory('resources/frontend/img','public/frontend/images')
     .version()

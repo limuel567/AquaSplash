@@ -53,3 +53,5 @@ import './sweetalert2';
 import './select2';
 
 import './uploadPreview';
+
+import './backend';

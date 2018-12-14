@@ -33,23 +33,24 @@
                         <ul class="list-unstyled">
                             <li>
                                 <img src="{{asset('frontend/images')}}/addressIcon.png">
-                                <span>Aqua Splash, Redricks Lakes, Redricks Lane, Sawbridgeworth, Herts/Essex, CM21 0RL</span>
+                                <span>{!!$configuration->address!!}</span>
                                 <hr>
                             </li>
                             <li>
                                 <img src="{{asset('frontend/images')}}/mailIcon.png">
-                                <span>info@aqua-splash.co.uk </span>
+                                <span>{!!$configuration->email!!}</span>
                                 <hr>
                             </li>
                             <li>
                                 <img src="{{asset('frontend/images')}}/contactIcon.png">
-                                <span>0333 456 1500</span>
+                                <span>{!!$configuration->contact_number!!}</span>
                             </li>
                             <li>
                                 <img src="{{asset('frontend/images')}}/socialIcon.png">
                                 <span>
-                                    <a href="#" class="fa fa-facebook"></a>
-                                    <a href="#" class="fa fa-instagram"></a>
+                                    @foreach (unserialize($configuration->social_media_links) as $key => $item)
+                                    <a href="https://www.{!!$key!!}.com/{!!$item!!}" class="fa fa-{!!$key!!}" target="_blank"></a>                                 
+                                    @endforeach
                                 </span>
                             </li>
                         </ul>
@@ -85,7 +86,7 @@
         </div>
         <div class="copyHolder text-center">
             <div class="container">
-                Aqua Splash 2019 - All rights reserved
+                {!! $configuration->copyright !!}
             </div>
         </div>
     </div>

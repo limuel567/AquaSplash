@@ -332,7 +332,7 @@ input[type=file].file-loading {
     font-size: 13px;
     font-variant: small-caps;
     color: #999;
-    background: url(../img/loading.gif) top left no-repeat
+    background: url(https://plugins.krajee.com/assets/9b656c2b/img/loading.gif) top left no-repeat
 }
 .file-object {
     margin: 0 0 -5px;
@@ -557,7 +557,7 @@ input[type=file].file-loading {
     width: 100%
 }
 .file-thumb-loading {
-    background: url(../img/loading.gif) center center no-repeat content-box !important
+    background: url(https://plugins.krajee.com/assets/9b656c2b/img/loading.gif) center center no-repeat content-box !important
 }
 .file-drop-zone {
     border: 1px dashed #aaa;
@@ -588,7 +588,7 @@ input[type=file].file-loading {
     background-color: #eee
 }
 .file-uploading {
-    background: url(../img/loading-sm.gif) center bottom 10px no-repeat;
+    background: url(https://plugins.krajee.com/assets/9b656c2b/img/loading-sm.gif) center bottom 10px no-repeat;
     opacity: .65
 }
 .file-zoom-fullscreen .modal-dialog {
@@ -658,7 +658,7 @@ input[type=file].file-loading {
     }
 }
 .file-loading[dir=rtl]:before {
-    background: url(../img/loading.gif) top right no-repeat;
+    background: url(https://plugins.krajee.com/assets/9b656c2b/img/loading.gif) top right no-repeat;
     padding-left: 0;
     padding-right: 20px
 }

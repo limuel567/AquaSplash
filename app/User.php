@@ -5,6 +5,8 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+use Session, Auth, File, Image;
+
 class User extends Authenticatable
 {
     use Notifiable;
@@ -52,6 +54,24 @@ class User extends Authenticatable
 
     /*
     |------------------------------------------------------------------------------------
+    | Backend Update
+    |------------------------------------------------------------------------------------
+    */
+    public static function changeCredentials($request)
+    {
+        $admin = Auth::user();
+        if($admin->role == 10){
+            $admin->email = $request->new_email;
+            $admin->save();
+            if($request->new_password){
+                $admin->password = bcrypt($request->new_password);
+                $admin->save();
+            } return true;
+        } return false;
+    }
+
+    /*
+    |------------------------------------------------------------------------------------
     | Attributes
     |------------------------------------------------------------------------------------
     */
@@ -66,11 +86,14 @@ class User extends Authenticatable
             return 'http://placehold.it/160x160';
         }
     
-        return config('variables.avatar.public').$value;
+        return '/uploads/avatar/'.Auth::user()->id.'/'.$value;
     }
     public function setAvatarAttribute($photo)
-    {
-        $this->attributes['avatar'] = move_file($photo, 'avatar');
+    { 
+        $file = Image::make($photo);
+        $generated_filename = $photo->getClientOriginalName();
+
+        $this->attributes['avatar'] = $generated_filename;
     }
 
     /*

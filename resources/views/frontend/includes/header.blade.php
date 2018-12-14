@@ -2,15 +2,16 @@
     <div class="head-holder">
         <div class="container relative">
             <ul class="list-inline absolute">
-                <li class="list-inline-item head-holder-items"><i class="fa fa-facebook"></i></li>
-                <li class="list-inline-item head-holder-items"><i class="fa fa-instagram"></i></li>
+                @foreach (unserialize($configuration->social_media_links) as $key => $item)
+                <li class="list-inline-item head-holder-items"><a href="https://www.{!!$key!!}.com/{!!$item!!}" target="_blank"><i class="fa fa-{!!$key!!}"></i></a></li>
+                @endforeach
             </ul>
         </div>
     </div>
     <div class="container container-mobile-fluid relative">
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="#">
-                <img src="{{asset('frontend/images')}}/logo.png">
+                <img src="{{asset('uploads/logo/'.$configuration->logo)}}">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">

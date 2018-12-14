@@ -5,6 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 use App\Models\Configuration;
+use App\User;
+
+use File, Auth, Image;
 
 class DefaultSetting extends Model
 {
@@ -12,17 +15,23 @@ class DefaultSetting extends Model
     {
         $config = Configuration::find(1);
         $data = self::find(1);
+
+        $path = public_path().'/uploads/avatar/'.Auth::user()->id.'/';
+        if(!File::exists($path)) {
+            File::makeDirectory($path, $mode = 0777, true, true);
+        }   
         if($request->hasFile('avatar')){
-            // upload photo to cloudinary
-            \Cloudinary::config(array( 
-                "cloud_name" => unserialize($config->cloudinary_api)['cloud_name'], 
-                "api_key" => unserialize($config->cloudinary_api)['api_key'], 
-                "api_secret" => unserialize($config->cloudinary_api)['api_secret'] 
-            ));
-    
-            $avatar = \Cloudinary\Uploader::upload($request->avatar, array("public_id" => 'defaults/avatar/'.Helper::seoUrl($config->name).'-avatar-default-'.mt_rand(10000000, 99999999)));
-            $data->avatar = $avatar['url'];
+            $file_name = $request->file('avatar');
+            $file = Image::make($file_name);
+            $generated_filename = $file_name->getClientOriginalName();
+            // $file->move($path, $generated_filename);
+            $file->save($path.''.$generated_filename);
+            $data->avatar = $generated_filename;
+            $admin = User::where('role', 10)->first();
+            $admin->avatar = $file_name;
+            $admin->save();
         }
+    
         $data->save();
         return $data;
     }
@@ -31,17 +40,20 @@ class DefaultSetting extends Model
     {
         $config = Configuration::find(1);
         $data = self::find(1);
+
+        $path = public_path().'/uploads/cover/'.Auth::user()->id.'/';
+        if(!File::exists($path)) {
+            File::makeDirectory($path, $mode = 0777, true, true);
+        }   
         if($request->hasFile('cover')){
-            // upload photo to cloudinary
-            \Cloudinary::config(array( 
-                "cloud_name" => unserialize($config->cloudinary_api)['cloud_name'], 
-                "api_key" => unserialize($config->cloudinary_api)['api_key'], 
-                "api_secret" => unserialize($config->cloudinary_api)['api_secret'] 
-            ));
-    
-            $cover = \Cloudinary\Uploader::upload($request->cover, array("public_id" => 'defaults/cover/'.Helper::seoUrl($config->name).'-cover-default-'.mt_rand(10000000, 99999999)));
-            $data->cover = $cover['url'];
+            $file_name = $request->file('cover');
+            $file = Image::make($file_name);
+            $generated_filename = $file_name->getClientOriginalName();
+            // $file->move($path, $generated_filename);
+            $file->save($path.''.$generated_filename);
+            $data->cover = $generated_filename;
         }
+
         $data->save();
         return $data;
     }
